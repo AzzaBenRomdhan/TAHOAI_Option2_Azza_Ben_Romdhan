@@ -61,34 +61,23 @@ TAHOAI_Option2_Azza_Ben_Romdhan/
 
 ### ▶️ Option 1: Run Locally (Without Docker)
 
- 1️⃣ Clone the repository
 ```bash
+# 1. Clonez le dépôt
 git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
 cd TAHOAI_Option2_Azza_Ben_Romdhan
 
-2️⃣ Backend Setup (FastAPI)
-```bash
+# 2. Backend (FastAPI)
 cd backend
 python -m venv venv
-# Activation
-# Unix/macOS :
-source venv/bin/activate
-# Windows :
-.\venv\Scripts\activate
-
-# Install dependencies
+source venv/bin/activate  # Linux/Mac
+.\venv\Scripts\activate  # Windows
 pip install -r requirements.txt
-
-# Run FastAPI backend
 uvicorn app.main:app --reload
-# Access API: http://localhost:8000
 
-3️⃣ Frontend Setup (React)
-```bash
+# 3. Frontend (React)
 cd ../frontend
 npm install
 npm run dev
-# Access Frontend: http://localhost:5173
 
 ## 📘 Api documentation
 
@@ -118,37 +107,5 @@ confidence = 0.7 + (0.3 × |score - 50| / 50)
 | education     | 1.05   |
 | other         | 1.0    |
 
----
-## 🛠 Local Setup Instructions
-1. Clone the repository:
- ```bash
- git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
-
-### Backend (Python)
-- Open backend folder:
- ```bash
-  cd TAHOAI_Option2_Azza_Ben_Romdhan/backend
-- Install dependencies:
- ```bash
-  pip install -r requirements.txt
-- Activate the virtual environment:
- ```bash
-  .\venv\Scripts\activate
-- Run the FastAPI app:
- ```bash
-  uvicorn main:app --reload
----
-
-### Frontend (React + TypeScript)
-- Open backend folder:
- ```bash
- cd TAHOAI_Option2_Azza_Ben_Romdhan/backend
-- Install dependencies:
- ```bash
-  npm install
- ```bash
-- Run the frontend:
- ```bash
-  npm run dev
 
 
