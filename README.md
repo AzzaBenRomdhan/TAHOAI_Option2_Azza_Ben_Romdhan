@@ -50,64 +50,7 @@ TAHOAI_Option2_Azza_Ben_Romdhan/
 └── README.md
 ```
 ---
-
-## 🚀 How to Run the Project
-
-### 🔧 Prerequisites
-- Python (3.10+)
-- Node.js (v18+)
-- Docker (optionnel pour mode containerisé)
-
-### ▶️ Option 1: Run Locally (Without Docker)
-
-```bash
-# 1. Clonez le dépôt
-git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
-cd TAHOAI_Option2_Azza_Ben_Romdhan
-```
-# 2. Backend (FastAPI)
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-.\venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
-# 3. Frontend (React)
-```bash
-cd ../frontend
-npm install
-npm run dev
-```
-
-### ▶️ Run with Docker
-```bash
-git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
-cd TAHOAI_Option2_Azza_Ben_Romdhan
-docker-compose up --build
-```
-
-# ✅ Access:
-# API      → http://localhost:8000
-# Frontend → http://localhost:5173
-
-# 🛑 Stop everything
-docker-compose down
-
-# 🔁 Rebuild without cache (optional)
-docker-compose build --no-cache
-docker-compose up
-
-# 🧹 Full cleanup (including volumes)
-docker-compose down -v
-
-## 📘 Api documentation
-
-### Endpoint
-**POST** `/api/v1/score`
-
-### 🔢 Score Logic
+## 🔢 Score Logic
 - **Score Calculation**:
 score = min(100, team_size × industry_weight)
 - **Labeling**: 
@@ -129,6 +72,84 @@ confidence = 0.7 + (0.3 × |score - 50| / 50)
 | retail        | 1.05   |
 | education     | 1.05   |
 | other         | 1.0    |
+
+
+## 🚀 How to Run the Project
+
+### 🧰 Prerequisites
+- **Python** (3.8+)
+- **Node.js** (v16+)
+- (Optionnel) **Docker** & **Docker Compose**
+
+---
+
+### ▶️ Option 1: Run Locally (Without Docker)
+
+#### 🧩 Step 1: Clone the Repository
+```bash
+git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
+cd TAHOAI_Option2_Azza_Ben_Romdhan
+```
+
+#### ⚙️ Step 2: Start the Backend (FastAPI)
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate        # For Linux/Mac
+# .\venv\Scripts\activate       # For Windows
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+#### 💻 Step 3: Start the Frontend (React + TypeScript)
+```bash
+cd ../frontend
+npm install
+npm run dev
+```
+
+---
+
+### ▶️ Option 2: Run with Docker
+
+#### 🚢 Run the app using Docker Compose
+```bash
+git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
+cd TAHOAI_Option2_Azza_Ben_Romdhan
+docker-compose up --build
+```
+
+#### ✅ Access the App
+- API: [http://localhost:8000](http://localhost:8000)
+- Frontend: [http://localhost:5173](http://localhost:5173)
+
+---
+
+### 🛑 Useful Docker Commands
+
+#### Stop all services
+```bash
+docker-compose down
+```
+
+#### Rebuild without cache
+```bash
+docker-compose build --no-cache
+docker-compose up
+```
+
+#### Full cleanup (including volumes)
+```bash
+docker-compose down -v
+```
+
+---
+
+## 📘 API Documentation
+
+### 📍 Endpoint
+**POST** `/api/v1/score`
+
 
 
 
