@@ -17,8 +17,8 @@ Each score is accompanied by a label: `"Early Stage"`, `"Established"`, or `"Mat
 ---
 
 ## 📦 Folder Structure (Backend)
-![Project Directory Structure](screenshots/structureBack.png)
-```` ```
+
+```bash
 backend/
 │
 ├── app/
@@ -59,7 +59,7 @@ backend/
 │
 ├── docker-compose.yml                # Multi-container setup
 └── README.md                         # Project docs
-```` ```
+```bash
 ---
 ## 🚀 How to Run the Project
 
