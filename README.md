@@ -1,6 +1,6 @@
-# 🧠 TAHO AI – Technical Evaluation (Option 2)  
-**Business Scoring API & Dashboard**  
-_Author: Azza Ben Romdhan – April 2025_
+# 🧠 TAHO AI – Technical Evaluation (Option 2)
+
+**Business Scoring API & Dashboard**
 
 ---
 
@@ -11,61 +11,84 @@ Each score is accompanied by a label: `"Early Stage"`, `"Established"`, or `"Mat
 
 ---
 
-## 📌 Video demo
-https://github.com/user-attachments/assets/388618e3-4e2d-4f8b-8fea-e17712797d67
+## 🎥 Video Demo
+
+[![Watch the demo](https://img.youtube.com/vi/your_video_id/0.jpg)](https://github.com/user-attachments/assets/388618e3-4e2d-4f8b-8fea-e17712797d67)  
+> *(If the thumbnail doesn't appear, you can simply link to the video here:)*  
+➡️ [Watch the demo video](https://github.com/user-attachments/assets/388618e3-4e2d-4f8b-8fea-e17712797d67)
+
 ---
 
-## 📦 Folder Structure (Backend)
+## 📦 Project Structure
 
 ```bash
-backend/
+TAHOAI_Option2_Azza_Ben_Romdhan/
 │
-├── app/
-│   ├── __init__.py
-│   ├── main.py                       
-│   ├── api/
-│   │   └── v1/
-│   │       └── endpoints/
-│   │           └── score.py          # Endpoint POST /score
-│   │
-│   ├── services/
-│   │   └── score_service.py          # Logique mockée + log en base
-│   │
-│   ├── schemas/
-│   │   └── business.py               # Pydantic models (CompanyData, ScoreResponse)
-│   │
-│   ├── db/
-│   │   └── models.py                 # SQLAlchemy models (log table)
-│   │   └── session.py                # Création de la session DB (SQLite)
-│   │
-│   ├── config.py                     # Paramètres comme INDUSTRY_WEIGHTS
-│   │
-│   ├── tests/
-│   │   └── integration/
-│   │       └── test_score_api.py  
-│   │   └── unit/
-│   │      └── test_score_logic.py  
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   ├── api/v1/endpoints/score.py           # POST /score endpoint
+│   │   ├── services/score_service.py           # Mock logic + DB logging
+│   │   ├── schemas/business.py                 # Pydantic models
+│   │   ├── db/models.py                        # SQLAlchemy models
+│   │   ├── db/session.py                       # DB session setup (SQLite)
+│   │   ├── config.py                           # INDUSTRY_WEIGHTS & settings
+│   │   ├── tests/
+│   │   │   ├── integration/test_score_api.py
+│   │   │   └── unit/test_score_logic.py
+│   ├── Dockerfile                              # Backend Dockerfile
+│   ├── requirements.txt                        # Python dependencies
 │
-├── Dockerfile                        # Image Docker de l’app
-├── requirements.txt                  # Dépendances Python
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx                             # Root component
+│   │   └── ...                                 # Other components
+│   ├── package.json                            # Frontend dependencies
+│   ├── Dockerfile                              # Frontend Dockerfile
 │
-├── frontend/                         # Frontend (React) code
-│   ├── src/                      
-│   │   ├── App.tsx                   # Root React component
-│   │   └── ...                       # Other components/assets
-│   ├── package.json                  # Frontend dependencies
-│   └── Dockerfile                    # Frontend Docker configuration
-│
-├── docker-compose.yml                # Multi-container setup
-└── README.md                         # Project docs
+├── docker-compose.yml                          # Multi-container setup
+└── README.md
 
 ---
 
 ## 🚀 How to Run the Project
 
-### Prerequisites
-- Python
-- node
+### 🔧 Prerequisites
+- Python (3.10+)
+- Node.js (v18+)
+- Docker (optionnel pour mode containerisé)
+
+### ▶️ Option 1: Run Locally (Without Docker)
+
+ 1️⃣ Clone the repository
+```bash
+git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
+cd TAHOAI_Option2_Azza_Ben_Romdhan
+
+2️⃣ Backend Setup (FastAPI)
+```bash
+cd backend
+python -m venv venv
+# Activation
+# Unix/macOS :
+source venv/bin/activate
+# Windows :
+.\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run FastAPI backend
+uvicorn app.main:app --reload
+# Access API: http://localhost:8000
+
+3️⃣ Frontend Setup (React)
+```bash
+cd ../frontend
+npm install
+npm run dev
+# Access Frontend: http://localhost:5173
 
 ## 📘 Api documentation
 
