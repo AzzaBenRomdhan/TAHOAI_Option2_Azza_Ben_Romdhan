@@ -20,7 +20,6 @@ Each score is accompanied by a label: `"Early Stage"`, `"Established"`, or `"Mat
 ---
 
 ## 📦 Project Structure
-
 ```bash
 TAHOAI_Option2_Azza_Ben_Romdhan/
 │
@@ -49,7 +48,7 @@ TAHOAI_Option2_Azza_Ben_Romdhan/
 │
 ├── docker-compose.yml                          # Multi-container setup
 └── README.md
-
+```
 ---
 
 ## 🚀 How to Run the Project
@@ -65,19 +64,43 @@ TAHOAI_Option2_Azza_Ben_Romdhan/
 # 1. Clonez le dépôt
 git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
 cd TAHOAI_Option2_Azza_Ben_Romdhan
-
+```
 # 2. Backend (FastAPI)
+```bash
 cd backend
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 .\venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-
+```
 # 3. Frontend (React)
+```bash
 cd ../frontend
 npm install
 npm run dev
+```
+
+### ▶️ Run with Docker
+```bash
+git clone https://github.com/AzzaBenRomdhan/TAHOAI_Option2_Azza_Ben_Romdhan.git
+cd TAHOAI_Option2_Azza_Ben_Romdhan
+docker-compose up --build
+```
+
+# ✅ Access:
+# API      → http://localhost:8000
+# Frontend → http://localhost:5173
+
+# 🛑 Stop everything
+docker-compose down
+
+# 🔁 Rebuild without cache (optional)
+docker-compose build --no-cache
+docker-compose up
+
+# 🧹 Full cleanup (including volumes)
+docker-compose down -v
 
 ## 📘 Api documentation
 
