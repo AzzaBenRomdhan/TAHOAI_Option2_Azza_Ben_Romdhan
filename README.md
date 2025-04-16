@@ -77,8 +77,8 @@ confidence = 0.7 + (0.3 × |score - 50| / 50)
 ## 🚀 How to Run the Project
 
 ### 🧰 Prerequisites
-- **Python** (3.8+)
-- **Node.js** (v16+)
+- **Python** (3.12+)
+- **Node.js** (v20+)
 - (Optionnel) **Docker** & **Docker Compose**
 
 ---
