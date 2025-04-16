@@ -12,8 +12,7 @@ Each score is accompanied by a label: `"Early Stage"`, `"Established"`, or `"Mat
 ---
 
 ## 📌 Video demo
-![Project Directory Structure](screenshots/demo.mp4)
-
+https://github.com/user-attachments/assets/388618e3-4e2d-4f8b-8fea-e17712797d67
 ---
 
 ## 📦 Folder Structure (Backend)
@@ -59,8 +58,9 @@ backend/
 │
 ├── docker-compose.yml                # Multi-container setup
 └── README.md                         # Project docs
-```bash
+
 ---
+
 ## 🚀 How to Run the Project
 
 ### Prerequisites
